@@ -12,9 +12,19 @@ export class SearchPage extends BasePage{
     private exactFoundMovieTitle =$$('movie-card h4.text-ellipsis').first()
     private popularSeriesHeader = $('ul.nav.navbar-nav > li:nth-child(2)')
     private popularSeries = $$('app-popular-series div.col-sm-6.col-md-4.col-lg-3.col-xs-6')
+    private upcomingMoviesFound = $$('div.row.is-flex > div.col-sm-6.col-md-4.col-lg-3.col-xs-6')
     
     async open(){
          await browser.get('/', 1000)
+    }
+
+    async openUpcomingMovies(){
+        this.upcomingMoviesButton.click()
+        await browser.wait(EC.visibilityOf(this.upcomingMoviesFound.first()), 5000, 'Movies not loaded!')
+    }
+    async openActionSection(){
+        this.actionSection.click()
+        await browser.wait(EC.visibilityOf(this.upcomingMoviesFound.first()), 5000, 'Movies not loaded!')
     }
     async searchFor(search_request: string | number){
 

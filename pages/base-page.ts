@@ -3,12 +3,9 @@ import { browser, element, By, $, $$ } from 'protractor'
 
 export class BasePage {
 
-    public upcomingMoviesHeader = $('#navbar li:nth-child(1)')
-    public popularSeriesHeader = $('#navbar li:nth-child(2)')
-    public actionCategory = $('ul.nav.nav-stacked a:nth-child(1)')
-    public URL = browser.baseUrl
-
+    public upcomingMoviesButton = $('ul.nav.navbar-nav li:nth-of-type(1)')
+    public popularSeriesButton = $('ul.nav.navbar-nav li:nth-of-type(2)')
+    public actionSection = $('a[href*="/Action"]')
     
-
 
 }

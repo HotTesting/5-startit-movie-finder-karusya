@@ -21,3 +21,6 @@ Finished in 0.009 seconds
 
 
 .ts files compiled to .js files automatically
+
+* Spec for lesson 3 contains examples of simple tests with jasmine
+* Spec for lesson 5 contains examples of  tests with mocha and chai containing waits
