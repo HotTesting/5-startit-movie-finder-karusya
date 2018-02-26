@@ -1,4 +1,6 @@
 import { browser, element, By, by, until, $, $$, Key, ExpectedConditions as EC } from 'protractor'
+import * as log4js from 'log4js';
+
 import { BasePage } from './base-page'
 
 export class SearchPage extends BasePage{
